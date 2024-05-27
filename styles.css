@@ -1,0 +1,67 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #555, #c8cbee);
+    color: #fff;
+  }
+  
+  #drum-kit {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .key {
+    border: 4px outset #fff;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+  }
+  
+  .key.active {
+    transform: scale(1.1);
+    border-color: #8d8a7ffd;
+    box-shadow: 0 0 10px #46433c;
+    color: #7a766e;
+  }
+  .key:active, .key:focus {
+    outline: none;
+    transform: scale(0.95);
+  }
+  button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin: 0px 10px;
+    cursor: pointer;
+    background-color:navy;
+    color: white;
+  }
+  /* Responsive adjustments */
+@media (max-width: 600px) {
+  .key {
+      width: 80px;
+      height: 80px;
+      font-size: 14px; /* Adjust font size for smaller screens */
+  }
+  #drum-kit {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+}
